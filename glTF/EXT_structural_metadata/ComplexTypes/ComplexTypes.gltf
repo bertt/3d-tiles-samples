@@ -2,6 +2,7 @@
   "extensions" : {
     "EXT_structural_metadata" : {
       "schema" : {
+        "id": "ComplexTypes",
         "classes" : {
           "exampleMetadataClass" : {
             "name" : "Example metadata class",
@@ -187,6 +188,7 @@
       "extensions" : {
         "EXT_mesh_features" : {
           "featureIds" : [ {
+            "featureCount" : 4,
             "attribute" : 0,
             "propertyTable" : 0
           } ]

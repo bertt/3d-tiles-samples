@@ -2,6 +2,7 @@
   "extensions" : {
     "EXT_structural_metadata" : {
       "schema" : {
+        "id": "FeatureIdTextureAndPropertyTableSchema",
         "classes" : {
           "buildingComponents" : {
             "name" : "Building components",
@@ -138,6 +139,7 @@
       "extensions" : {
         "EXT_mesh_features" : {
           "featureIds" : [ {
+            "featureCount" : 4,
             "texture" : {
               "index" : 1,
               "texCoord" : 0,

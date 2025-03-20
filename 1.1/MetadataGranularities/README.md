@@ -1,6 +1,6 @@
 # Metadata Granularities
 
-This sample demonstrates the use of [Metadata in 3D Tiles 1.1](https://github.com/CesiumGS/3d-tiles/blob/draft-1.1/specification) on different levels of granularity. The sample consists of a tileset with 4 tiles where each tile has 5 contents, and the contents are assigned to two different groups. Metadata is assigned to the tileset, the tiles, each content, and to the groups.
+This sample demonstrates the use of [Metadata in 3D Tiles 1.1](https://github.com/CesiumGS/3d-tiles/blob/main/specification) on different levels of granularity. The sample consists of a tileset with 4 tiles where each tile has 5 contents, and the contents are assigned to two different groups. Metadata is assigned to the tileset, the tiles, each content, and to the groups.
 
 ## Screenshot
 
@@ -14,10 +14,12 @@ const viewer = new Cesium.Viewer("cesiumContainer");
 // Create the tileset, and set its model matrix to move it
 // to a certain position on the globe
 const tileset = viewer.scene.primitives.add(
-  new Cesium.Cesium3DTileset({
-    url: "http://localhost:8003/1.1/MetadataGranularities/tileset.json",
-    debugShowBoundingVolume: true,
-  })
+  await Cesium.Cesium3DTileset.fromUrl(
+    "http://localhost:8003/1.1/MetadataGranularities/tileset.json",
+    {
+      debugShowBoundingVolume: true,
+    }
+  )
 );
 tileset.modelMatrix = Cesium.Transforms.eastNorthUpToFixedFrame(
   Cesium.Cartesian3.fromDegrees(-75.152325, 39.94704, 0.0)

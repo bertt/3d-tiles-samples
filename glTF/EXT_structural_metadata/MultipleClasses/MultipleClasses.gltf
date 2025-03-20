@@ -2,6 +2,7 @@
   "extensions" : {
     "EXT_structural_metadata" : {
       "schema" : {
+        "id": "MultipleClassesSchema",
         "classes" : {
           "exampleMetadataClassA" : {
             "name" : "Example metadata class A",
@@ -196,9 +197,11 @@
       "extensions" : {
         "EXT_mesh_features" : {
           "featureIds" : [ {
+            "featureCount" : 4,
             "attribute" : 0,
             "propertyTable" : 0
           }, {
+            "featureCount" : 4,
             "attribute" : 1,
             "propertyTable" : 1
           } ]
